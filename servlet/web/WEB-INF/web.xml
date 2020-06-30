@@ -6,7 +6,7 @@
         <!-- 配置 servlet -->
         <servlet>
             <servlet-name>servletDemo1</servlet-name>
-            <servlet-class>com.jiajia.study.servlet.ServletDemo1</servlet-class>
+            <servlet-class>com.jiajia.study.filter.servlet.ServletDemo1</servlet-class>
         </servlet>
 
         <servlet-mapping>
@@ -16,7 +16,7 @@
     
         <servlet>
             <servlet-name>genericServletDemo1</servlet-name>
-            <servlet-class>com.jiajia.study.servlet.GenericServletDemo</servlet-class>
+            <servlet-class>com.jiajia.study.filter.servlet.GenericServletDemo</servlet-class>
         </servlet>
         <servlet-mapping>
             <servlet-name>genericServletDemo1</servlet-name>
@@ -25,7 +25,7 @@
     
         <servlet>
             <servlet-name>httpServletDemo1</servlet-name>
-            <servlet-class>com.jiajia.study.servlet.HttpServletDemo1</servlet-class>
+            <servlet-class>com.jiajia.study.filter.servlet.HttpServletDemo1</servlet-class>
         </servlet>
         <servlet-mapping>
             <servlet-name>httpServletDemo1</servlet-name>

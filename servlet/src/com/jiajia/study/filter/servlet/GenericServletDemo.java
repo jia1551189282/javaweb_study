@@ -1,4 +1,4 @@
-package com.jiajia.study.servlet;
+package com.jiajia.study.filter.servlet;
 
 import javax.servlet.GenericServlet;
 import javax.servlet.ServletException;

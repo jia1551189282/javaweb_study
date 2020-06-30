@@ -1,36 +1,26 @@
-package com.jiajia.study.cookie;
-
-/**
- * @author ZJJ
- * @date 2020/6/28 0028 下午 2:56
- */
+package com.jiajia.study.servlet;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 细节1 ：可以添加多个cookie
+ * @author ZJJ
+ * @date 2020/6/30 0030 上午 9:06
  */
-@WebServlet("/cookieDemo3")
-public class CookieDemo3 extends HttpServlet {
+@WebServlet("/servletDemo1")
+public class ServletDemo1 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // 1 创建cookie对象
-        Cookie c = new Cookie("msg1","hello");
-        Cookie c1 = new Cookie("msg2","hello2");
-        // 2 添加cookie
-        resp.addCookie(c);
-        resp.addCookie(c1);
-
+        doGet(req,resp);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.doPost(req,resp);
+        System.out.println("servlet执行");
     }
 }

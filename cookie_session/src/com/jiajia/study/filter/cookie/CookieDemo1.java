@@ -1,4 +1,4 @@
-package com.jiajia.study.cookie;
+package com.jiajia.study.filter.cookie;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

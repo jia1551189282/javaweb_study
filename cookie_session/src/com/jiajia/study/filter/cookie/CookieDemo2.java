@@ -1,36 +1,36 @@
-package com.jiajia.study.session;
+package com.jiajia.study.filter.cookie;
 
 /**
  * @author ZJJ
- * @date 2020/6/28 0028 下午 4:09
+ * @date 2020/6/28 0028 下午 2:51
  */
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * 获取设置的session 的值
+ * 获取cookie
  */
-
-@WebServlet("/sessionDemo2")
-public class SessionDemo2 extends HttpServlet {
-
+@WebServlet("/cookieDemo2")
+public class CookieDemo2  extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // 1 获取session
-        HttpSession session = req.getSession();
-       // 2 获取session 数据
-        Object msg = session.getAttribute("msg");
-        System.out.println(msg);
+        Cookie[] cookies = req.getCookies();
+        for (Cookie cookie: cookies
+             ) {
+            String cookieKey = cookie.getName();
+            String cookieValue = cookie.getValue();
+            System.out.println(cookieKey + ":" + cookieValue);
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.doGet(req,resp);
+        this.doPost(req,resp);
     }
 }
